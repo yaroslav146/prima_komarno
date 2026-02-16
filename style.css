@@ -140,29 +140,38 @@ li:hover{
     flex-direction: row;
     justify-content: center;
     margin-top: 40px;
-    justify-content: space-around;
+    justify-content: center;
 }
 .pribehBox{
-    max-width: 300px;
-    flex: 0 1 300px;
+    max-width: 500px;
+
 }
 .pribehNabidka{
     background: rgba(90, 62, 52, 0.954);
     padding: 15px;
     color: rgb(255, 188, 164);
     border-radius: 15px ;
-    box-shadow: 0px 10px 50px rgb(0, 0, 0);
-    font-size: 20px;
+    font-size: 25px;
     display: flex;
-
+    margin: 25px;
+    transition: all .3s ease;
 }
+.pribehNabidka:hover{
+    background: rgb(211, 154, 134);
+    color: rgba(67, 47, 39, 0.954);
+    box-shadow: 0px 100px 1000px rgb(0, 0, 0);
+    transform: scale(1.03);
+    box-shadow: 0 4px 12px rgb(0, 0, 0);
+}
+
 .pribehPopis h2{
     text-align: center;
     border-bottom: 1px solid;
     margin: 5px;
 }
 .ilustrace img {
-    width: 270px;
+    max-width: 270px;
+    border-radius: 10px;
 }
 .ilustrace{
     text-align: center;
@@ -172,9 +181,13 @@ li:hover{
     max-width: 400px;
 }
 .sipka{
-    transition: all .3s ease;
     text-align: center;
 }
-.sipka:hover{
-    transform: translateX(5px);
+.sipka:hover img {
+    animation: sipkaMove 0.6s ease-in-out infinite;
+}
+@keyframes sipkaMove {
+    0%   { transform: translateX(-5px); }
+    50%  { transform: translateX(5px); }
+    100% { transform: translateX(-5px); }
 }
