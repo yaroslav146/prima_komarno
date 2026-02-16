@@ -95,8 +95,10 @@ li:hover{
     margin: 15px;
 }
 #horniTitulek{
-    font-size: 50px;
+    font-size: 80px;
     color: rgb(255, 255, 255);
+    border-bottom: 2px solid rgb(255, 255, 255);
+    display: inline-block;
 }
 .ikony{
     display: flex;
@@ -118,7 +120,7 @@ li:hover{
 }
 
 
-/* SCTION */
+/* SECTION */
 .pribeh{
     margin-top: 50px;
     margin-bottom: 50px;
@@ -138,6 +140,7 @@ li:hover{
     flex-direction: row;
     justify-content: center;
     margin-top: 40px;
+    justify-content: space-around;
 }
 .pribehBox{
     max-width: 300px;
@@ -146,26 +149,23 @@ li:hover{
 .pribehNabidka{
     background: rgba(90, 62, 52, 0.954);
     padding: 15px;
-    margin: 20px;
     color: rgb(255, 188, 164);
     border-radius: 15px ;
     box-shadow: 0px 10px 50px rgb(0, 0, 0);
     font-size: 20px;
     display: flex;
-    justify-content: space-between;
+
 }
 .pribehPopis h2{
     text-align: center;
     border-bottom: 1px solid;
     margin: 5px;
 }
-.pribehNabidka .ilustrace{
-    margin: 10px;
-    display: flex;
-    justify-content: center;
+.ilustrace img {
+    width: 270px;
 }
 .ilustrace{
-    width: 230px;
+    text-align: center;
 }
 .pribehNabidka{
     flex-direction: row;
