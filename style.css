@@ -10,14 +10,9 @@ a{
     text-decoration: none;
 
 }
-
-.horniPrima{
-    min-width: 1000px;
-}
 .container{
-    min-width: 1000px;
-    margin: auto;
-    display: flex;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 .horniMenu{
     background-color: rgba(72, 52, 42, 0.7);
@@ -26,8 +21,14 @@ a{
     display: flex;
     justify-content: space-around;
     align-items: center;
+    font-size: clamp(25px, 2vw, 35px);
 }
-
+.obsahMenu{
+    max-width: 90%;
+    display: flex;
+    align-items: center;
+    width: 100vw;
+}
 header{
     background-image: url(obrazky/header.jpg);
     background-size: cover; 
@@ -42,6 +43,7 @@ header{
     justify-content: space-around;
     flex: 1;
     margin-top: 15px;
+    margin-left: 20%;
 }
 li{
     padding:10px;
@@ -51,13 +53,15 @@ li{
     margin: 5px;
 
     color: rgba(173, 216, 230, 0);
- 
+
     outline: 2px solid rgba(173, 216, 230, 0);
     outline-offset: -2px;
     transition: all .3s ease;
+    background:#ffffff18;
 }
 li:hover{
     transform: scale(0.9);
+    background: rgba(4, 0, 0, 0);
     outline-offset: 3px;
     outline-color: aliceblue;
 }
@@ -76,25 +80,25 @@ li:hover{
 .menuPopisek{
     color: rgb(245, 167, 139);
     text-decoration: none;
-    font-size: 50px;
+    font-size: 60px;
     font-family: Kaushan script;
-    
 }
 .horniPrima{
     text-align: center;
     font-family: Kaushan script;
     color: aliceblue;
     margin: 10px;
-    text-shadow: 0px 0px 10px black;
+    text-shadow: 0px 0px 20px black;
     display: flex;
     justify-content: center;
     flex-direction: column;
 }
 .horniPrima, p{
     margin: 15px;
+    font-size: 25px;
 }
 #horniTitulek{
-    font-size: 80px;
+    font-size: 100px;
     color: rgb(255, 255, 255);
     border-bottom: 2px solid rgb(255, 255, 255);
     display: inline-block;
@@ -149,7 +153,7 @@ li:hover{
     margin: 0 auto;
 }
 .pribehNabidka{
-    background: rgba(90, 62, 52, 0.954);
+    background: rgb(88, 55, 42);
     padding: 15px;
     color: rgb(255, 188, 164);
     border-radius: 15px ;
@@ -160,10 +164,9 @@ li:hover{
 }
 .pribehNabidka:hover{
     background: rgb(211, 154, 134);
-    color: rgba(67, 47, 39, 0.954);
-    box-shadow: 0px 100px 1000px rgb(0, 0, 0);
+    color: rgb(67, 47, 39);
     transform: scale(1.03);
-    box-shadow: 0 4px 12px rgb(0, 0, 0);
+    box-shadow: 0 5px 30px rgb(0, 0, 0);
 }
 
 .pribehPopis h2{
@@ -197,44 +200,68 @@ li:hover{
 /* SECTION BROWN */
 .brown{
     display: flex;
-    background-color: rgba(85, 46, 6, 0.754);
-    flex-wrap: wrap;
+    align-items: stretch;
+    background-color: rgb(85, 45, 6);
+    overflow: hidden;
+    max-height: 700px;
+    margin: 10px auto;
+    margin-bottom: 0;
+}
+.brown img{
+    width: 50%;
+    object-fit: cover;
 }
 .brownText{
     width: 50%;
-    text-align: right;
-    color: aliceblue;
-    display: flex;
-    padding: 50px 20px;
-    justify-content: flex-end;
     position: relative;
+    display: flex;
+    align-items: center;
+    padding: 40px;
+    color: aliceblue;
+}
+.half{
+    max-width: 500px;
+    z-index: 2;
+    margin: 0px auto;
+    padding-left: 20%;
 }
 .half p{
-    line-height: 25px;
+    line-height: 26px;
+    font-size: 25px;
+    margin-bottom: 25px;
 }
-.half h2:nth-of-type(2){
-    padding-top: 50px;
+.half h2{
+    font-size: 35px;
+    margin-bottom: 15px;
+    font-family: Kaushan script;
 }
 .brownObdelnik{
-    height: 100%;
-    width: 15%;
-    background: rgba(160, 120, 93, 0.5);
+    background: linear-gradient(to left, transparent, rgb(85, 45, 6));
     position: absolute;
-    top: 0;
-    right: -15%;
-    z-index: inherit;
+    left: 100%;
+    width: 50%;
+    height: 100%;
 }
+
+
+/* SECTION TIP */
 .tip{
     padding: 70px 0;
+    width: 100%;
+    margin: 0 auto;
+    justify-content: space-evenly;
+    background: linear-gradient(to bottom, #2b140abe, #3a1c0f73, #2b140a00);
 }
 .tip .container{
     display: flex;
-    justify-content: space-between;
+    margin-top: 0.5%;
+    align-items: center;
 }
 .tipObr{
     flex: 0 1 60%;
     display: flex;
     justify-content: space-around;
+    margin-left: 20px;
 }
 .tipInfo{
     flex: 0 1 30%;
@@ -246,6 +273,11 @@ li:hover{
     width: 300px;
     height: 450px;
     position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.tipRamecek:hover{
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.5);
 }
 .tipRamecek img{
     position: absolute;
@@ -253,15 +285,29 @@ li:hover{
     left: -20px;
 }
 .tipInfo h2{
-    font-size: 30px;
-    padding-bottom: 50px;
+    font-size: 40px;
+    padding-bottom: 4%;
+    text-align: center;
+    border-bottom: 1px solid;
+    margin: 5px;
+    font-family: Kaushan script;
+
 }
 .tipInfo{
     line-height: 25px;
     padding-bottom: 15px;
+    margin-left: 3%;
+    color: rgb(38, 21, 4);
+    background: rgba(82, 37, 20, 0.143);
+    border-radius: 25px;
+    padding: 20px;
 }
-.tipInfo p {
-    padding-bottom: 15px;
+.tipInfo a {
+    display: block;
+    text-align: center;
+    border: 1px solid rgba(38, 21, 4, 0.416);;
+    padding: 10px;
+    border-radius: 10px;
 }
 
 
