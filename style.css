@@ -45,7 +45,7 @@ header{
     margin-top: 15px;
     margin-left: 20%;
 }
-li{
+.menu li{
     padding:10px;
     background-color:rgba(100, 0, 154, 0);
     border-radius: 10px;
@@ -54,12 +54,12 @@ li{
 
     color: rgba(173, 216, 230, 0);
 
-    outline: 2px solid rgba(173, 216, 230, 0);
+    outline: 2px solid rgba(173, 216, 230, 0.087);
     outline-offset: -2px;
     transition: all .3s ease;
     background:#ffffff18;
 }
-li:hover{
+.menu li:hover{
     transform: scale(0.9);
     background: rgba(4, 0, 0, 0);
     outline-offset: 3px;
@@ -310,6 +310,50 @@ li:hover{
     border-radius: 10px;
 }
 
-
-
-
+/* PATA */
+.pata .container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.pata{
+    background-color: rgb(85, 45, 6);
+    color: rgb(255, 188, 164);
+    padding: 15px;
+    font-size: 20px;
+    padding-top: 4%;
+    padding-bottom: 2%;
+    border-top: 2px solid rgb(0, 0, 0);
+}
+.pata a{
+    color: rgb(255, 229, 220);
+    font-weight: bold;
+    background-color: rgba(245, 245, 220, 0);
+    display: inline-block;
+    padding-bottom: 10px;
+}
+.container ul li{
+    list-style: none;
+    transition: all 0.3s ease;
+}
+.container ul li:hover{
+    transform: scale(1.03);
+    padding: 1%;
+    text-decoration: underline 10px 10px rgb(255, 188, 164);
+}
+.container h3{
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: rgb(255, 187, 164);
+    padding-bottom: 5%;
+    font-family: kaushan script;
+}
+.prava{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0,8% 0;
+    max-width: 70%;
+    margin: auto;
+}
