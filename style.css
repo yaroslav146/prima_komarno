@@ -175,7 +175,8 @@ header{
     margin: 5px;
 }
 .ilustrace img {
-    max-width: 270px;
+    width: 400vw;
+    max-width: 100%;
     border-radius: 10px;
 }
 .ilustrace{
@@ -250,6 +251,7 @@ header{
     width: 100%;
     margin: 0 auto;
     justify-content: space-evenly;
+    align-items: center;
     background: linear-gradient(to bottom, #2b140abe, #3a1c0f73, #2b140a00);
 }
 .tip .container{
@@ -270,8 +272,10 @@ header{
 /* RAMECEK */
 .tipRamecek{
     background: rgb(82, 37, 20);
-    width: 300px;
-    height: 450px;
+    width: 37%;
+    max-width: 100%;
+
+
     position: relative;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -280,9 +284,11 @@ header{
     box-shadow: 0 15px 40px rgba(0,0,0,0.5);
 }
 .tipRamecek img{
-    position: absolute;
+    position: relative;
     top: -20px;
     left: -20px;
+    width: 100%;
+    max-height: 100%;
 }
 .tipInfo h2{
     font-size: 40px;
@@ -323,7 +329,7 @@ header{
     font-size: 20px;
     padding-top: 4%;
     padding-bottom: 2%;
-    border-top: 2px solid rgb(0, 0, 0);
+    border-top: 3px solid rgb(255, 188, 164);
 }
 .pata a{
     color: rgb(255, 229, 220);
@@ -334,12 +340,20 @@ header{
 }
 .container ul li{
     list-style: none;
+}
+.container ul li a{
     transition: all 0.3s ease;
 }
-.container ul li:hover{
-    transform: scale(1.03);
-    padding: 1%;
-    text-decoration: underline 10px 10px rgb(255, 188, 164);
+.container ul li a:hover{
+    text-decoration: underline;
+    margin: 1%;
+}
+.pataDoba{
+    color: rgb(255, 229, 220);
+    font-weight: bold;
+    background-color: rgba(245, 245, 220, 0);
+    display: inline-block;
+    padding-bottom: 10px;
 }
 .container h3{
     font-size: 30px;
